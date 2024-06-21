@@ -35,13 +35,11 @@
         .about__canvas-container {
             width: 100%;
             position: relative;
-            padding: 2rem 0 5rem 0;
 
-            img {
+            canvas {
                 display: none;
                 width: 100%;
-                height: 100%;
-                object-fit: contain;
+                aspect-ratio: 1 / 1;
             }
 
             svg {
@@ -99,8 +97,9 @@
 
             .about__canvas-container {
                 padding: 0;
+                margin-bottom: 10rem;
 
-                img {
+                canvas {
                     display: block;
                 }
 

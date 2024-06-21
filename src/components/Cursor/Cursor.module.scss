@@ -9,7 +9,7 @@
     height: 8px;
     border-radius: 50%;
     pointer-events: none;
-    z-index: 1000;
+    z-index: 100000;
     background-color: white;
     transform: translate(calc(var(--mouse-x) - 50%), calc(var(--mouse-y) - 50%))
         scale(var(--cursor-scale, 1));
