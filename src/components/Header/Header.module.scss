@@ -1,0 +1,153 @@
+@import "../../scss/media-query";
+@import "../../scss/padding";
+@import "../../scss/easings";
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background: white;
+    font-size: 1.25rem;
+    color: black;
+
+    .header__wrapper {
+        width: 100%;
+        max-width: 2400px;
+        margin: 0 auto;
+        padding: 0.75rem 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        @include horizontal-padding;
+
+        .header__logo {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+
+            .logo {
+                height: 18px;
+
+                path {
+                    fill: black;
+                }
+            }
+
+            video {
+                width: 24px;
+                height: 24px;
+            }
+        }
+
+        .header__links {
+            display: none;
+            align-items: center;
+            transition:
+                opacity 0.4s $easing,
+                transform 0.4s $easing;
+
+            p {
+                margin-right: 0.3rem;
+            }
+        }
+
+        .header__contact {
+            display: none;
+            align-items: flex-end;
+            gap: 1rem;
+
+            .time {
+                font-size: 0.875rem;
+                text-transform: uppercase;
+                margin-bottom: 0.1rem;
+            }
+        }
+
+        .header__mobile-menu-button {
+        }
+    }
+
+    @include large-devices-up {
+        background: transparent;
+        mix-blend-mode: difference;
+        color: white;
+        font-size: 1.35rem;
+
+        .header__wrapper {
+            padding: 1.5rem 0;
+
+            @include horizontal-padding;
+
+            .header__logo {
+                .logo {
+                    height: 22px;
+
+                    path {
+                        fill: white;
+                    }
+                }
+
+                video {
+                    width: 32px;
+                    height: 32px;
+                }
+            }
+
+            .header__links,
+            .header__contact {
+                display: flex;
+            }
+
+            .header__mobile-menu-button {
+                display: none;
+            }
+        }
+    }
+
+    @include extra-large-devices-up {
+        font-size: 1.8rem;
+
+        .header__wrapper {
+            padding: 2.5rem 0;
+
+            @include horizontal-padding;
+
+            .header__logo {
+                .logo {
+                    height: 22px;
+                }
+            }
+
+            .header__contact {
+                .time {
+                    font-size: 1rem;
+                    margin-right: 0.2rem;
+                }
+            }
+        }
+    }
+
+    @include extra-extra-large-devices-up {
+        font-size: 2rem;
+
+        .header__wrapper {
+            @include horizontal-padding;
+
+            .header__logo {
+                .logo {
+                    height: 24px;
+                }
+            }
+
+            .header__contact {
+                .time {
+                    font-size: 1.3rem;
+                    margin-right: 0.3rem;
+                }
+            }
+        }
+    }
+}

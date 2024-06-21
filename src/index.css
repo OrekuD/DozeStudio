@@ -1,0 +1,66 @@
+:root {
+    font-family: UncutSans, system-ui, Avenir, Helvetica, Arial, sans-serif;
+    line-height: 1;
+    font-weight: 400;
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: white;
+}
+
+/* body {
+    cursor: none;
+} */
+
+button,
+a {
+    all: unset;
+}
+
+@font-face {
+    font-family: UncutSans;
+    src: url("../public/fonts/UncutSans-Regular.woff2") format("woff2");
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: UncutSans;
+    src: url("../public/fonts/UncutSans-RegularItalic.woff") format("woff2");
+    font-weight: 400;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: UncutSans;
+    src: url("../public/fonts/UncutSans-Medium.woff2") format("woff2");
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: UncutSans;
+    src: url("../public/fonts/UncutSans-MediumItalic.woff") format("woff2");
+    font-weight: 500;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: UncutSans;
+    src: url("../public/fonts/UncutSans-Semibold.woff2") format("woff2");
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: UncutSans;
+    src: url("../public/fonts/UncutSans-Bold.woff2") format("woff2");
+    font-weight: 700;
+}

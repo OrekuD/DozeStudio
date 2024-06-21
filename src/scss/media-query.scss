@@ -1,0 +1,41 @@
+@mixin tiny-devices-up {
+    @media (min-width: 320px) {
+        @content;
+    }
+}
+
+@mixin small-devices-up {
+    @media (min-width: 576px) {
+        @content;
+    }
+}
+
+@mixin medium-devices-up {
+    @media (min-width: 768px) {
+        @content;
+    }
+}
+
+@mixin large-devices-up {
+    @media (min-width: 992px) {
+        @content;
+    }
+}
+
+@mixin extra-large-devices-up {
+    @media (min-width: 1200px) {
+        @content;
+    }
+}
+
+@mixin extra-extra-large-devices-up {
+    @media (min-width: 1700px) {
+        @content;
+    }
+}
+
+@mixin extra-extra-extra-large-devices-up {
+    @media (min-width: 2400px) {
+        @content;
+    }
+}

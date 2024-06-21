@@ -1,0 +1,33 @@
+@import "../../scss/media-query.scss";
+@import "../../scss/easings.scss";
+
+.cursor {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 1000;
+    background-color: white;
+    transform: translate(calc(var(--mouse-x) - 50%), calc(var(--mouse-y) - 50%))
+        scale(var(--cursor-scale, 1));
+    transition: transform 0.15s $easing;
+    mix-blend-mode: difference;
+
+    @include large-devices-up {
+        width: 10px;
+        height: 10px;
+    }
+
+    @include extra-large-devices-up {
+        width: 12px;
+        height: 12px;
+    }
+
+    @include extra-extra-large-devices-up {
+        width: 14px;
+        height: 14px;
+    }
+}

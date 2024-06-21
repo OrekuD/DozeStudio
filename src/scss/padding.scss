@@ -1,0 +1,38 @@
+@import "./media-query";
+
+@mixin horizontal-padding {
+    @include tiny-devices-up {
+        padding-left: 1.25rem;
+        padding-right: 1.25rem;
+    }
+
+    @include small-devices-up {
+        padding-left: 1.75rem;
+        padding-right: 1.75rem;
+    }
+
+    @include medium-devices-up {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+
+    @include large-devices-up {
+        padding-left: 3rem;
+        padding-right: 3rem;
+    }
+
+    @include extra-large-devices-up {
+        padding-left: 4rem;
+        padding-right: 4rem;
+    }
+
+    @include extra-extra-large-devices-up {
+        padding-left: 5rem;
+        padding-right: 5rem;
+    }
+
+    @include extra-extra-extra-large-devices-up {
+        padding-left: 7rem;
+        padding-right: 7rem;
+    }
+}
