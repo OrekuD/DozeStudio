@@ -16,11 +16,8 @@
 
 body {
     background: white;
-}
-
-/* body {
     cursor: none;
-} */
+}
 
 button,
 a {
@@ -35,32 +32,32 @@ a {
 
 @font-face {
     font-family: UncutSans;
-    src: url("../public/fonts/UncutSans-RegularItalic.woff") format("woff2");
+    src: url("../fonts/UncutSans-RegularItalic.woff") format("woff2");
     font-weight: 400;
     font-style: italic;
 }
 
 @font-face {
     font-family: UncutSans;
-    src: url("../public/fonts/UncutSans-Medium.woff2") format("woff2");
+    src: url("../fonts/UncutSans-Medium.woff2") format("woff2");
     font-weight: 500;
 }
 
 @font-face {
     font-family: UncutSans;
-    src: url("../public/fonts/UncutSans-MediumItalic.woff") format("woff2");
+    src: url("../fonts/UncutSans-MediumItalic.woff") format("woff2");
     font-weight: 500;
     font-style: italic;
 }
 
 @font-face {
     font-family: UncutSans;
-    src: url("../public/fonts/UncutSans-Semibold.woff2") format("woff2");
+    src: url("../fonts/UncutSans-Semibold.woff2") format("woff2");
     font-weight: 600;
 }
 
 @font-face {
     font-family: UncutSans;
-    src: url("../public/fonts/UncutSans-Bold.woff2") format("woff2");
+    src: url("../fonts/UncutSans-Bold.woff2") format("woff2");
     font-weight: 700;
 }

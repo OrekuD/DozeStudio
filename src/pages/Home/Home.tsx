@@ -126,23 +126,6 @@ export default function HomePage() {
   const [hoveredIndex, setHoveredIndex] = React.useState(-1);
   const projectsRef = React.useRef<HTMLDivElement>(null);
 
-  // React.useEffect(() => {
-  //   if (!hash) return;
-  //   const elementPosition =
-  //     projectsRef.current!.getBoundingClientRect().top + window.scrollY;
-
-  //   console.log({
-  //     elementPosition,
-  //     top: projectsRef.current!.getBoundingClientRect().top,
-  //   });
-
-  //   window.scrollTo({
-  //     top: elementPosition - 150,
-  //     behavior: "smooth",
-  //   });
-  //   projectsRef.current?.scrollIntoView({ behavior: "smooth" });
-  // }, [hash, projectsRef]);
-
   const translateY = useTransform(
     scrollY,
     [0, window.innerHeight],
@@ -155,21 +138,15 @@ export default function HomePage() {
     return projects[hoveredIndex];
   }, [hoveredIndex]);
 
+  React.useEffect(() => {
+    projects.forEach(({ video }) => {
+      const videoEl = document.createElement("video");
+      videoEl.src = video;
+    });
+  }, []);
+
   return (
-    <motion.div
-      className={classes["home"]}
-      initial={{
-        translateY: 200,
-      }}
-      animate={{
-        translateY: 0,
-        transition: {
-          ease: cubicBezier(0.16, 1, 0.32, 1),
-          duration: 1,
-          delay: 1,
-        },
-      }}
-    >
+    <div className={classes["home"]}>
       <div className={classes["home__hero"]}>
         <motion.div
           className={classes["hero__background-showreel"]}
@@ -241,7 +218,7 @@ export default function HomePage() {
         </div>
       </div>
       <Footer variant="black" sticky />
-    </motion.div>
+    </div>
   );
 }
 
@@ -274,11 +251,9 @@ function Project({
     <motion.div
       key={title}
       ref={ref}
-      style={
-        {
-          // opacity,
-        }
-      }
+      style={{
+        opacity,
+      }}
       onMouseEnter={() => {
         setHoveredIndex(index);
         CursorStates.link();

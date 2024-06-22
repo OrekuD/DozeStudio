@@ -1,5 +1,4 @@
 import classes from "./About.module.scss";
-import { cubicBezier, motion } from "framer-motion";
 import Footer from "../../components/Footer/Footer";
 import { ArrowDownIcon } from "../../icons/Icons";
 import React from "react";
@@ -23,16 +22,12 @@ export default function About() {
   const canvasRef = React.useRef<HTMLCanvasElement>(null);
 
   React.useEffect(() => {
-    function preloadImages() {
-      Array(367)
-        .fill(null)
-        .map((_, index) => {
-          const img = new Image();
-          img.src = `https://doze.studio/sequence/about${index + 1}.webp`;
-        });
-    }
-
-    preloadImages();
+    Array(367)
+      .fill(null)
+      .map((_, index) => {
+        const img = new Image();
+        img.src = `https://doze.studio/sequence/about${index + 1}.webp`;
+      });
   }, []);
 
   React.useEffect(() => {
@@ -82,20 +77,7 @@ export default function About() {
   }, [canvasRef]);
 
   return (
-    <motion.div
-      className={classes["about"]}
-      initial={{
-        translateY: 200,
-      }}
-      animate={{
-        translateY: 0,
-        transition: {
-          ease: cubicBezier(0.16, 1, 0.32, 1),
-          duration: 1,
-          delay: 1,
-        },
-      }}
-    >
+    <div className={classes["about"]}>
       <div className={classes["about__inner-container"]}>
         <div className={classes["about__hero"]}>
           <p className={classes["about__hero-title"]}>About</p>
@@ -145,6 +127,6 @@ export default function About() {
         </div>
       </div>
       <Footer variant="white" />
-    </motion.div>
+    </div>
   );
 }

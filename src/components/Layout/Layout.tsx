@@ -8,6 +8,12 @@ import PageTransition from "../PageTransition/PageTransition";
 import ScrollToAnchor from "../ScrollToAnchor";
 import usePageTransitionStore from "../../store/pageTransitionStore";
 import React from "react";
+import load from "../../assets/videos/load.mp4";
+import logoAnim from "../../assets/videos/logoAnim.mp4";
+import showreel from "../../assets/videos/Showreel_2024_light.mp4";
+import underScribbleProject from "../../assets/videos/underScribbleProject.mp4";
+
+const assets = [load, showreel, logoAnim, underScribbleProject];
 
 export default function Layout() {
   const initial = React.useRef(true);
@@ -15,6 +21,13 @@ export default function Layout() {
 
   React.useEffect(() => {
     initial.current = false;
+  }, []);
+
+  React.useEffect(() => {
+    assets.map((_video) => {
+      const video = document.createElement("video");
+      video.src = _video;
+    });
   }, []);
 
   return (

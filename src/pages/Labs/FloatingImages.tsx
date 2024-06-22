@@ -128,14 +128,10 @@ export default function FloatingImages() {
   }, []);
 
   React.useEffect(() => {
-    function preloadImages() {
-      images.map((image) => {
-        const img = new Image();
-        img.src = image;
-      });
-    }
-
-    preloadImages();
+    images.map((image) => {
+      const img = new Image();
+      img.src = image;
+    });
   }, []);
 
   return (

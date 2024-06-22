@@ -4,6 +4,8 @@
 
 .home {
     width: 100%;
+    animation: intro-animation 1s $easing;
+    animation-delay: 1s;
 
     .home__hero {
         width: 100%;
@@ -185,5 +187,15 @@
                 }
             }
         }
+    }
+}
+
+@keyframes intro-animation {
+    from {
+        transform: translateY(200px);
+    }
+
+    to {
+        transform: translateY(0px);
     }
 }

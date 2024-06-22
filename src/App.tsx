@@ -24,7 +24,7 @@ const router = createBrowserRouter(
 function App() {
   useMousePositionCSS();
 
-  return <RouterProvider router={router} />;
+  // return <RouterProvider router={router} />;
 
   return (
     <ReactLenis root>

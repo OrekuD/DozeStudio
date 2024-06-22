@@ -1,4 +1,5 @@
 import { Logo } from "../../icons/Icons";
+import CursorStates from "../Cursor/CursorStates";
 import classes from "./Footer.module.scss";
 
 type FooterProps = {
@@ -29,7 +30,12 @@ export default function Footer(props: FooterProps) {
           <Logo className={classes["footer__logo"]} />
         </div>
         <div className={classes["footer__row"]}>
-          <a href="" className={classes["footer__mailto"]}>
+          <a
+            href="mailto:test@gmail.com"
+            className={classes["footer__mailto"]}
+            onMouseOver={CursorStates.link}
+            onMouseLeave={CursorStates.reset}
+          >
             <p>hello@doze-studio.com</p>
           </a>
           <p>Legals</p>
@@ -44,17 +50,33 @@ export default function Footer(props: FooterProps) {
           </div>
           <div className={classes["footer__align-right"]}>
             <p className={classes["footer__section-title"]}>networks</p>
-            <a href="">
+            <a
+              href=""
+              onMouseOver={CursorStates.link}
+              onMouseLeave={CursorStates.reset}
+            >
               <p>+33 2 85 52 19 62</p>
             </a>
             <p>▬</p>
-            <a href="">
+            <a
+              href=""
+              onMouseOver={CursorStates.link}
+              onMouseLeave={CursorStates.reset}
+            >
               <p>Instagram</p>
             </a>
-            <a href="">
+            <a
+              href=""
+              onMouseOver={CursorStates.link}
+              onMouseLeave={CursorStates.reset}
+            >
               <p>Linkedin</p>
             </a>
-            <a href="">
+            <a
+              href=""
+              onMouseOver={CursorStates.link}
+              onMouseLeave={CursorStates.reset}
+            >
               <p>Giphy</p>
             </a>
           </div>
