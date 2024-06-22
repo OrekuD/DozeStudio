@@ -13,7 +13,7 @@ import logoAnim from "../../assets/videos/logoAnim.mp4";
 import showreel from "../../assets/videos/Showreel_2024_light.mp4";
 import underScribbleProject from "../../assets/videos/underScribbleProject.mp4";
 
-const assets = [load, showreel, logoAnim, underScribbleProject];
+const assets = [showreel, load, logoAnim, underScribbleProject];
 
 export default function Layout() {
   const initial = React.useRef(true);
