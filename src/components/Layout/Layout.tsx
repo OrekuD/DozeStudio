@@ -21,7 +21,7 @@ export default function Layout() {
     <div className={classes["container"]}>
       <Header />
       <Cursor />
-      {/* <InactivityOverlay /> */}
+      <InactivityOverlay />
       <IntroTransition />
       <ScrollToAnchor />
       {pageTransitionStore.isVisible ? (

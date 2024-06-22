@@ -8,11 +8,22 @@ export default function IntroTransition() {
 
   React.useEffect(() => {
     document.body.style.overflow = "hidden";
-    videoRef.current?.addEventListener("ended", () => {
-      if (!ref.current) return;
-      ref.current.style.transform = "translateY(-100%)";
-      document.body.style.overflow = "auto";
-    });
+
+    function onVideoEnded() {
+      if (!videoRef.current) return;
+      videoRef.current.style.opacity = "0";
+      setTimeout(() => {
+        if (!ref.current) return;
+        ref.current.style.transform = "translateY(-100%)";
+        document.body.style.overflow = "auto";
+      }, 700);
+    }
+
+    videoRef.current?.addEventListener("ended", onVideoEnded);
+
+    return () => {
+      videoRef.current?.removeEventListener("ended", onVideoEnded);
+    };
   }, [videoRef]);
 
   return (

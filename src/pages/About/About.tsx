@@ -71,17 +71,17 @@ export default function About() {
   return (
     <motion.div
       className={classes["about"]}
-      // initial={{
-      //   translateY: 200,
-      // }}
-      // animate={{
-      //   translateY: 0,
-      //   transition: {
-      //     ease: cubicBezier(0.16, 1, 0.32, 1),
-      //     duration: 1,
-      //     delay: 1,
-      //   },
-      // }}
+      initial={{
+        translateY: 200,
+      }}
+      animate={{
+        translateY: 0,
+        transition: {
+          ease: cubicBezier(0.16, 1, 0.32, 1),
+          duration: 1,
+          delay: 1,
+        },
+      }}
     >
       <div className={classes["about__inner-container"]}>
         <div className={classes["about__hero"]}>

@@ -26,7 +26,6 @@ import nopeVideo from "../../assets/videos/DOZE_nope_branding_MASTER_25ca6ae2c4.
 import heiwaVideo from "../../assets/videos/HEIWA_DIRECTORSCUT_3_39f96aecb4.mp4";
 import mobileVideo from "../../assets/videos/20210501_Mastre_Mobile_M_01_95897c3ad5.mp4";
 import Footer from "../../components/Footer/Footer";
-import { useLocation } from "react-router-dom";
 
 function clamp(n: number, min: number, max: number) {
   return Math.min(Math.max(n, min), max);
@@ -126,7 +125,6 @@ export default function HomePage() {
   const { scrollY } = useScroll();
   const [hoveredIndex, setHoveredIndex] = React.useState(-1);
   const projectsRef = React.useRef<HTMLDivElement>(null);
-  const { hash } = useLocation();
 
   // React.useEffect(() => {
   //   if (!hash) return;

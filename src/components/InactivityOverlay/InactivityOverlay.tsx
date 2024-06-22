@@ -29,7 +29,7 @@ export default function InactivityOverlay() {
 
   return (
     <div className={classes["inactivity-overlay"]} ref={ref}>
-      <video loop autoPlay muted controls={false} ref={videoRef}>
+      <video autoPlay muted controls={false} ref={videoRef}>
         <source src={video} />
       </video>
     </div>
