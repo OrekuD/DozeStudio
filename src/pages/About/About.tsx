@@ -23,6 +23,19 @@ export default function About() {
   const canvasRef = React.useRef<HTMLCanvasElement>(null);
 
   React.useEffect(() => {
+    function preloadImages() {
+      Array(367)
+        .fill(null)
+        .map((_, index) => {
+          const img = new Image();
+          img.src = `https://doze.studio/sequence/about${index + 1}.webp`;
+        });
+    }
+
+    preloadImages();
+  }, []);
+
+  React.useEffect(() => {
     if (!canvasRef.current) return;
     const canvasContext = canvasRef.current.getContext("2d");
     if (!canvasContext) return;
