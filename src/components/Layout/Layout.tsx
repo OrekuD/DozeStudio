@@ -24,9 +24,9 @@ export default function Layout() {
   }, []);
 
   React.useEffect(() => {
-    assets.map((_video) => {
+    assets.forEach((asset) => {
       const video = document.createElement("video");
-      video.src = _video;
+      video.src = asset;
     });
   }, []);
 

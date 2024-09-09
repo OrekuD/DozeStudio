@@ -2,32 +2,16 @@ import classes from "./About.module.scss";
 import Footer from "../../components/Footer/Footer";
 import { ArrowDownIcon } from "../../icons/Icons";
 import React from "react";
-
-const references = [
-  "samsung",
-  "red bull",
-  "a24",
-  "ubisoft",
-  "adidas",
-  "porsche",
-  "yuga labs",
-  "airbnb",
-  "burger king",
-  "roger dubuis",
-  "martell",
-  "mekaverse",
-];
+import { references, images } from "./data";
 
 export default function About() {
   const canvasRef = React.useRef<HTMLCanvasElement>(null);
 
   React.useEffect(() => {
-    Array(367)
-      .fill(null)
-      .map((_, index) => {
-        const img = new Image();
-        img.src = `https://doze.studio/sequence/about${index + 1}.webp`;
-      });
+    images.forEach((image) => {
+      const img = new Image();
+      img.src = image;
+    });
   }, []);
 
   React.useEffect(() => {
@@ -42,11 +26,11 @@ export default function About() {
     const img = new Image();
 
     const loadImage = (id: number) => {
-      const imageUrl =
-        id === 0
-          ? `https://doze.studio/sequence/about1.webp`
-          : `https://doze.studio/sequence/about${id}.webp`;
-      img.src = imageUrl;
+      if (id >= images.length) {
+        img.src = images[0];
+      } else {
+        img.src = images[id];
+      }
     };
 
     const drawImage = () => {

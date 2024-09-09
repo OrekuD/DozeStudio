@@ -1,31 +1,31 @@
 import React from "react";
 import classes from "./Labs.module.scss";
-import image1 from "../../assets/images/labs/1.png";
+import image1 from "../../assets/images/labs/1.webp";
 import image2 from "../../assets/images/labs/2.gif";
-import image3 from "../../assets/images/labs/3.png";
-import image4 from "../../assets/images/labs/4.png";
-import image5 from "../../assets/images/labs/5.jpg";
-import image6 from "../../assets/images/labs/6.jpg";
-import image7 from "../../assets/images/labs/7.jpg";
-import image8 from "../../assets/images/labs/8.jpg";
-import image9 from "../../assets/images/labs/9.jpg";
-import image10 from "../../assets/images/labs/10.jpg";
-import image11 from "../../assets/images/labs/11.png";
+import image3 from "../../assets/images/labs/3.webp";
+import image4 from "../../assets/images/labs/4.webp";
+import image5 from "../../assets/images/labs/5.webp";
+import image6 from "../../assets/images/labs/6.webp";
+import image7 from "../../assets/images/labs/7.webp";
+import image8 from "../../assets/images/labs/8.webp";
+import image9 from "../../assets/images/labs/9.webp";
+import image10 from "../../assets/images/labs/10.webp";
+import image11 from "../../assets/images/labs/11.webp";
 import image12 from "../../assets/images/labs/12.webp";
-import image13 from "../../assets/images/labs/13.jpg";
-import image14 from "../../assets/images/labs/14.png";
-import image15 from "../../assets/images/labs/15.png";
-import image16 from "../../assets/images/labs/16.png";
-import image17 from "../../assets/images/labs/17.png";
-import image18 from "../../assets/images/labs/18.png";
-import image19 from "../../assets/images/labs/19.png";
-import image20 from "../../assets/images/labs/20.png";
-import image21 from "../../assets/images/labs/21.png";
-import image22 from "../../assets/images/labs/22.png";
+import image13 from "../../assets/images/labs/13.webp";
+import image14 from "../../assets/images/labs/14.webp";
+import image15 from "../../assets/images/labs/15.webp";
+import image16 from "../../assets/images/labs/16.webp";
+import image17 from "../../assets/images/labs/17.webp";
+import image18 from "../../assets/images/labs/18.webp";
+import image19 from "../../assets/images/labs/19.webp";
+import image20 from "../../assets/images/labs/20.webp";
+import image21 from "../../assets/images/labs/21.webp";
+import image22 from "../../assets/images/labs/22.webp";
 import image23 from "../../assets/images/labs/23.webp";
-import image24 from "../../assets/images/labs/24.png";
-import image25 from "../../assets/images/labs/25.png";
-import image26 from "../../assets/images/labs/26.png";
+import image24 from "../../assets/images/labs/24.webp";
+import image25 from "../../assets/images/labs/25.webp";
+import image26 from "../../assets/images/labs/26.webp";
 
 const images = [
   image1,
@@ -128,7 +128,7 @@ export default function FloatingImages() {
   }, []);
 
   React.useEffect(() => {
-    images.map((image) => {
+    images.forEach((image) => {
       const img = new Image();
       img.src = image;
     });
