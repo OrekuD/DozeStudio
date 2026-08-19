@@ -8,10 +8,11 @@ export default function IntroTransition() {
 
   React.useEffect(() => {
     document.body.style.overflow = "hidden";
+    const video = videoRef.current;
 
     function onVideoEnded() {
-      if (!videoRef.current) return;
-      videoRef.current.style.opacity = "0";
+      if (!video) return;
+      video.style.opacity = "0";
       setTimeout(() => {
         if (!ref.current) return;
         ref.current.style.transform = "translateY(-100%)";
@@ -19,10 +20,10 @@ export default function IntroTransition() {
       }, 700);
     }
 
-    videoRef.current?.addEventListener("ended", onVideoEnded);
+    video?.addEventListener("ended", onVideoEnded);
 
     return () => {
-      videoRef.current?.removeEventListener("ended", onVideoEnded);
+      video?.removeEventListener("ended", onVideoEnded);
     };
   }, [videoRef]);
 

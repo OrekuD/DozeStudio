@@ -16,7 +16,6 @@ function ScrollToAnchor() {
     if (lastHash.current && document.getElementById(lastHash.current)) {
       setTimeout(() => {
         const element = document.getElementById(lastHash.current);
-        // eslint-disable-next-line @typescript-eslint/strict-boolean-expressions
         if (element) {
           const elementPosition =
             element.getBoundingClientRect().top + window.scrollY;
